@@ -1,0 +1,248 @@
+/* 
+
+1. Tu ngoai vao trong
+2. Tu tren xuong duoi
+3. Tong quan den chi tiet
+
+1. Vi tri 
+2. Kich thuoc (width, height)
+3. Mau sac
+4. Kieu dang 
+
+*/
+
+/* reset css */
+*{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+
+html{
+     scroll-behavior: smooth;
+     font-family: Verdana, sans-serif;
+}
+
+/* BEGIN common */
+.clear{
+     clear: both;
+}
+
+.row2::after{
+     content: "";
+     display: block;
+     clear: both;
+}
+
+.col2{
+     float: left;
+}
+
+.col2-3{
+     width: calc(100%/3);
+}
+
+
+/* END common */
+
+/* BEGIN main */
+#header {
+     z-index: 1;
+     position: fixed;
+     top: 0;
+     right: 0;
+     left: 0;
+     height: 46px;
+     background: #000;
+}
+
+#header .search-btn{
+     float: right; /* mac dinh block */
+     padding: 0 24px;
+}
+
+#header .search-btn .search-icon{
+     color: #fff;
+     font-size: 15px;
+     font-weight: 600;
+     line-height: 46px;
+}
+
+#header .search-btn:hover {
+     cursor: pointer;
+     background: red;
+}
+
+#header .search-btn:hover .search-icon{
+     color: #000;
+}
+
+#nav{
+     /* height: 100%; */
+     font-size: 16px;
+     display: inline-block;
+}
+
+#nav,#nav .subnav{
+     list-style: none;
+}
+
+#nav > li{
+     display: inline-block;
+}
+
+#nav li{
+     position: relative;
+}
+
+#nav li a{
+     display: block; /*de cho line-height*/
+     text-decoration: none;
+}
+
+#nav > li > a{
+     color: #fff;
+     padding: 0 20px;
+     line-height: 46px;
+     text-transform: uppercase;
+}
+
+#nav > li:hover > a{
+     color: #000;
+     background:#ccc;
+     box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+#nav .subnav{
+     display: none;
+     min-width: 160px;
+     position: absolute;
+     top: 100%;
+     left: 0;
+     background: #fff;
+     box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+#nav .subnav li a{
+     color:#000;
+     padding: 0 16px;
+     line-height: 40px;
+}
+
+#nav .subnav li:hover {
+     background:#ccc;
+}
+
+#nav li:hover .subnav{
+     display: block;
+}
+
+#nav .ic-arrow-down{
+     font-size: 12px;
+}
+
+/* BEGIN slider */
+#slider{
+     height: 518px;
+     margin-top: 46px;
+     padding-top: 50%;
+     position: relative;
+     background: url('/assets/imgs/sliders/chicago.jpg') top center / cover no-repeat;
+}
+
+#slider .slider-content{
+     position: absolute;
+     bottom: 0;
+     width: 100%;
+     padding: 32px 0;
+     /* right: 0;
+     left: 0; */
+}
+
+#slider .slider-heading,
+#slider .slider-description{
+     color: #fff;
+     text-align: center;
+}
+
+#slider .slider-heading{
+     font-size: 24px;
+     font-weight: 500;
+     margin: 10px 0;
+     line-height: 40px;
+}
+
+#slider .slider-description{
+     font-size: 15px;
+     margin: 15px 0;
+     font-weight: 700;
+     line-height: 30px;
+}
+/* END slider */
+
+
+#content .content-section{
+     /* height: 800px; */
+     width: 800px;
+     max-width: 100%;
+     padding: 64px 16px;
+     margin-left: auto;
+     margin-right: auto;
+     background: #fff;
+}
+
+#content .section-heading{
+     font-size: 30px;
+     font-weight: 500;
+     text-align: center;
+     margin: 10px 0;
+     letter-spacing: 4px;
+}
+
+#content .section-slogan{
+     font-size: 15px;
+     text-align: center;
+     font-style: italic;
+     opacity: 0.4;
+     margin: 15px 0;
+}
+
+/* BEGIN band-section */
+#content #band .band-text{
+     font-size: 15px;
+     text-align: justify;
+     line-height: 1.6;
+     margin: 15px 0;
+}
+
+#content #band .band-imgs{
+    text-align: center;
+    /* align-items: center;  */
+}
+
+#content #band .band-imgs img{
+     height: 154px;
+     margin-bottom: 16px;
+     border-radius: 5px;
+}
+
+#content #band .band-img-name {
+     margin: 15px 0;
+     font-size: 15px;
+     line-height: 22px;
+}
+
+/* END band-section */
+
+/* BEGIN tour-section */
+
+/* END tour-section */
+
+/* BEGIN contact-section */
+
+/* END contact-section */
+
+
+/* END main */
+
+
